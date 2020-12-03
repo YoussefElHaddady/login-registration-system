@@ -1,0 +1,36 @@
+{
+  "name": "login_registration_system",
+  "version": "1.0.0",
+  "description": "Responsive good designed Login &amp; Registration system",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YoussefElHaddady/login-registration-system.git"
+  },
+  "keywords": [
+    "login",
+    "registration",
+    "nodeJS",
+    "express",
+    "mongoDB",
+    "JWT",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Youssef EL HADDADY",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YoussefElHaddady/login-registration-system/issues"
+  },
+  "homepage": "https://github.com/YoussefElHaddady/login-registration-system#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
