@@ -30,8 +30,25 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.post('/login', (req, res) => {
-  res.send('Login');
+router.post('/login', async (req, res) => {
+  //Data validation
+  const { error } = loginValidation(req.body);
+  if (error) return res.status(400).send(error.details[0].message);
+
+  //checking if the user is already in the database
+  const errorMsg = 'Email or password is wrong';
+  const userExist = await User.findOne({ email: req.body.email });
+  if (!userExist) return res.status(400).send(errorMsg);
+
+  // valid password
+  const validePass = await bcrypt.compare(
+    req.body.password,
+    userExist.password
+  );
+
+  if (!validePass) return res.status(400).send(errorMsg);
+
+  res.send('Logged in !');
 });
 
 module.exports = router;
