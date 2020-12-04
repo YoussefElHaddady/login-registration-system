@@ -1,2 +1,2 @@
 # login-registration-system
-Responsive good designed Login &amp; Registration system
+### Responsive good designed Login & Registration system. Using HTML5, CSS3, JavaScript, NodeJS, Express, MongoDB, JWT, ... 
